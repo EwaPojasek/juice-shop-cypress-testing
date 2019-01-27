@@ -1,6 +1,5 @@
 describe('Check the Login Functionality', function () {
 
-
     it('Check the system behavior when password is invalid and email address is valid', function () {
         cy.visit('https://juice-shop-for-testing.herokuapp.com/#/login')
 
@@ -70,7 +69,5 @@ describe('Check the Login Functionality', function () {
 
         cy.url().should('contain', 'register')
     })
-
-
 
 })
