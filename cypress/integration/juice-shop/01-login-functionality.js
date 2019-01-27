@@ -1,4 +1,6 @@
 describe('Check the Login Functionality', function () {
+
+
     it('Check the system behavior when password is invalid and email address is valid', function () {
         cy.visit('https://juice-shop-for-testing.herokuapp.com/#/login')
 
@@ -53,6 +55,21 @@ describe('Check the Login Functionality', function () {
     })
 
 
+    it('Check the system behavior when clicking restore password link', function () {
+        cy.visit('https://juice-shop-for-testing.herokuapp.com/#/login')
+
+        cy.get('a').contains('Forgot your password').click()
+
+        cy.url().should('contain', 'forgot-password')
+    })
+
+    it('Check the system behavior when clicking registration link', function () {
+        cy.visit('https://juice-shop-for-testing.herokuapp.com/#/login')
+
+        cy.get('a').contains('Not yet a customer?').click()
+
+        cy.url().should('contain', 'register')
+    })
 
 
 
