@@ -1,0 +1,3 @@
+node_modules
+~$scenario.xlsx
+cypress/integration/examples
